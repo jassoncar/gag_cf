@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ussers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Password</th>
+      <th>Email</th>
+      <th>Bio</th>
+      <th>Programa</th>
+      <th>Birthday</th>
+      <th>Work time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <% numero = "234" %>
+  <% if is_number?(numero)%>
+      <b><%= numero %> </b>
+  <% else %>
+  <b> enviastes palabras </b>
+  <% end %>
+  <tbody>
+    <% @ussers.each do |usser| %>
+      <tr>
+        <td><%= usser.nombre %></td>
+        <td><%= usser.password %></td>
+        <td><%= usser.email %></td>
+        <td><%= usser.bio %></td>
+        <td><%= usser.programa %></td>
+        <td><%= usser.birthday %></td>
+        <td><%= usser.work_time %></td>
+        <td><%= link_to 'Show', usser %></td>
+        <td><%= link_to 'Edit', edit_usser_path(usser) %></td>
+        <td><%= link_to 'Destroy', usser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usser', new_usser_path %>

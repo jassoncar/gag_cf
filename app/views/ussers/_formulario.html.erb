@@ -1,0 +1,28 @@
+<%= form_for(@usser) do |u|%>
+ <div class='field'>
+    <% nombres = {'algo de algo' => 'algo','pedro lopez' => 'pedro','codigo facilito' => 'cf'} %>
+    <% lista = nombres.sort %>
+    <%= u.label :nombre %>
+    <%= u.select :nombre, lista, selected: "cf" %> 
+ </div>
+
+ <div class='field'>
+    <%= u.label :bio%>
+    <%= u.text_area :bio, :cols => 30, :rows =>10 %> 
+    </div>
+
+ <div class='field'>
+    <%= u.label :nombre%>
+    <%= u.check_box :nombre,checked: "checked" %> 
+ </div>
+
+ <div class='field'>
+    <%= u.label :birthday %>
+    <%= u.date_select :birthday, start_year: 1990, end_year: 2003 %> 
+ </div>
+
+ <div class='field'>
+    <%= u.label :work_time %>
+    <%= u.time_select :work_time%>
+ </div>
+<% end %>

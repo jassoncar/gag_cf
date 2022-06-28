@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @usser.nombre %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @usser.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @usser.email %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @usser.bio %>
+</p>
+
+<p>
+  <strong>Programa:</strong>
+  <%= @usser.programa %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @usser.birthday %>
+</p>
+
+<p>
+  <strong>Work time:</strong>
+  <%= @usser.work_time %>
+</p>
+
+<%= link_to 'Edit', edit_usser_path(@usser) %> |
+<%= link_to 'Back', ussers_path %>
